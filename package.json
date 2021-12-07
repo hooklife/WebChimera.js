@@ -20,6 +20,6 @@
     "cmake-js": "*"
   },
   "scripts": {
-    "install": "node rebuild.js"
+    "install": "echo skip build"
   }
 }
