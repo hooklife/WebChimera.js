@@ -679,7 +679,7 @@ void* JsVlcPlayer::onFrameSetup(const I420VideoFrame& videoFrame)
     callCallback(CB_FrameSetup, { jsWidth, jsHeight, jsPixelFormat, jsArray });
 
 #ifdef USE_ARRAY_BUFFER
-    return jsArray->Buffer()->GetContents().Data();
+    return jsArray->Buffer()->GetBackingStore()->Data();
 #else
     return jsArray->GetIndexedPropertiesExternalArrayData();
 #endif
